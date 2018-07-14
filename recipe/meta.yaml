@@ -1,5 +1,5 @@
 {% set name = "frozendict" %}
-{% set version = "1.2"%}
+{% set version = "1.2" %}
 {% set sha256 = "774179f22db2ef8a106e9c38d4d1f8503864603db08de2e33be5b778230f6e45" %}
 
 package:
@@ -12,11 +12,13 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
 
