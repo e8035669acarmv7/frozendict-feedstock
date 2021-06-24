@@ -1,6 +1,6 @@
 {% set name = "frozendict" %}
-{% set version = "1.2" %}
-{% set sha256 = "774179f22db2ef8a106e9c38d4d1f8503864603db08de2e33be5b778230f6e45" %}
+{% set version = "2.0.3" %}
+{% set sha256 = "163c616188beb97fdc8ef6e73ec2ebd70a844d4cf19d2e383aa94d1b8376653d" %}
 
 package:
   name: {{ name|lower }}
@@ -13,29 +13,29 @@ source:
 
 build:
   noarch: python
-  number: 3
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
 
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
     - frozendict
 
 about:
-  home: https://github.com/slezica/python-frozendict
-  license: MIT
-  license_family: MIT
+  home: https://github.com/Marco-Sulla/python-frozendict
+  license: LGPL-3.0-only
+  license_family: LGPL
   license_file: LICENSE.txt
-  summary: 'An immutable dictionary'
-  dev_url: https://github.com/slezica/python-frozendict
+  summary: An immutable dictionary
+  dev_url: https://github.com/Marco-Sulla/python-frozendict
 
 extra:
   recipe-maintainers:
