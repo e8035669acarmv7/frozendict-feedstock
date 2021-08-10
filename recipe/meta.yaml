@@ -12,18 +12,20 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - pip
-    - python >=3.6
+    - python
     - setuptools
+    - wheel
 
   run:
-    - python >=3.6
+    - python
 
 test:
   imports:
