@@ -1,15 +1,15 @@
 About frozendict
 ================
 
-Home: https://github.com/slezica/python-frozendict
+Home: https://github.com/Marco-Sulla/python-frozendict
 
-Package license: MIT
+Package license: [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/frozendict-feedstock/blob/master/LICENSE.txt)
 
-Summary: An immutable dictionary
+Summary: A simple immutable dictionary
 
-Development: https://github.com/slezica/python-frozendict
+Development: https://github.com/Marco-Sulla/python-frozendict
 
 Current build status
 ====================
