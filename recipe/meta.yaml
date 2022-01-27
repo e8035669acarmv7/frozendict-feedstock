@@ -24,12 +24,12 @@ outputs:
         - {{ compiler('c') }}
       host:
         - pip
-        - python >= 3.6
+        - python >=3.6
         - setuptools
         - wheel
 
       run:
-        - python >= 3.6
+        - python >=3.6
 
       test:
         imports:
@@ -42,12 +42,12 @@ outputs:
     requirements:
       host:
         - pip
-        - python >= 3.6
+        - python >=3.6
         - setuptools
         - wheel
 
       run:
-        - python >= 3.6
+        - python >=3.6
     test:
       imports:
         - frozendict
