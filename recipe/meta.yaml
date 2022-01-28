@@ -31,9 +31,9 @@ outputs:
       run:
         - python
 
-      test:
-        imports:
-          - frozendict
+    test:
+      imports:
+        - frozendict
   
   - name: {{ name }}-noarch
     build:
@@ -49,9 +49,9 @@ outputs:
       run:
         - python
 
-      test:
-        imports:
-          - frozendict
+    test:
+      imports:
+        - frozendict
 
 about:
   home: https://github.com/Marco-Sulla/python-frozendict
