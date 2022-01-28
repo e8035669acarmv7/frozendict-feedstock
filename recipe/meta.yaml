@@ -17,7 +17,7 @@ build:
 outputs:
   - name: {{ name }}
     build:
-      script: {{ PYTHON }} -m pip install . --no-deps -vv
+      script: python -m pip install . --no-deps -vv
 
     requirements:
       build:
@@ -37,7 +37,7 @@ outputs:
   
   - name: {{ name }}-noarch
     build:
-      script: {{ PYTHON }} setup.py py bdist_wheel
+      script: python setup.py py bdist_wheel
 
     requirements:
       host:
