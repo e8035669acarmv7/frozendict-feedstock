@@ -37,7 +37,7 @@ outputs:
   
   - name: {{ name }}-noarch
     build:
-      script: python setup.py py bdist_wheel
+      script: python setup.py py install
 
     requirements:
       host:
