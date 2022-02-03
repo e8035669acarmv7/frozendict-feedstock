@@ -38,6 +38,7 @@ outputs:
   - name: {{ name }}-noarch
     build:
       script: python setup.py py install
+      noarch: python
 
     requirements:
       host:
