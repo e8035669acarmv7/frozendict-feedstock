@@ -12,24 +12,47 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-  host:
-    - pip
-    - python
-    - setuptools
-    - wheel
+outputs:
+  - name: {{ name }}
+    build:
+      script: python -m pip install . --no-deps -vv
 
-  run:
-    - python
+    requirements:
+      build:
+        - {{ compiler('c') }}
+      host:
+        - pip
+        - python
+        - setuptools
+        - wheel
 
-test:
-  imports:
-    - frozendict
+      run:
+        - python
+
+    test:
+      imports:
+        - frozendict
+  
+  - name: {{ name }}-noarch
+    build:
+      script: python setup.py py install
+      noarch: python
+
+    requirements:
+      host:
+        - pip
+        - python
+        - setuptools
+        - wheel
+
+      run:
+        - python
+
+    test:
+      imports:
+        - frozendict
 
 about:
   home: https://github.com/Marco-Sulla/python-frozendict

@@ -126,6 +126,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-frozendict-green.svg)](https://anaconda.org/conda-forge/frozendict) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/frozendict.svg)](https://anaconda.org/conda-forge/frozendict) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/frozendict.svg)](https://anaconda.org/conda-forge/frozendict) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/frozendict.svg)](https://anaconda.org/conda-forge/frozendict) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-frozendict--noarch-green.svg)](https://anaconda.org/conda-forge/frozendict-noarch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/frozendict-noarch.svg)](https://anaconda.org/conda-forge/frozendict-noarch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/frozendict-noarch.svg)](https://anaconda.org/conda-forge/frozendict-noarch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/frozendict-noarch.svg)](https://anaconda.org/conda-forge/frozendict-noarch) |
 
 Installing frozendict
 =====================
@@ -137,10 +138,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `frozendict` can be installed with:
+Once the `conda-forge` channel has been enabled, `frozendict, frozendict-noarch` can be installed with:
 
 ```
-conda install frozendict
+conda install frozendict frozendict-noarch
 ```
 
 It is possible to list all of the versions of `frozendict` available on your platform with:
