@@ -2,6 +2,9 @@
 {% set version = "2.3.0" %}
 {% set sha256 = "da4231adefc5928e7810da2732269d3ad7b5616295b3e693746392a8205ea0b5" %}
 
+{% set build_noarch = False %}
+{% set build_noarch = True %}  # [linux64 and py==310]
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -35,10 +38,13 @@ outputs:
       imports:
         - frozendict
   
-  - name: {{ name }}-noarch
+  {% if build_noarch}
+  - name: {{ name }}
     build:
       script: python setup.py py install
       noarch: python
+      number: 2
+  {% endif %}
 
     requirements:
       host:
