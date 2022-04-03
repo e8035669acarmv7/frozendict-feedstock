@@ -38,7 +38,7 @@ outputs:
       imports:
         - frozendict
   
-  {% if build_noarch}
+  {% if build_noarch %}
   - name: {{ name }}
     build:
       script: python setup.py py install
