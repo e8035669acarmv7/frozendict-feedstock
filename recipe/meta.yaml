@@ -44,7 +44,6 @@ outputs:
       script: python setup.py py install
       noarch: python
       number: 3
-  {% endif %}
 
     requirements:
       host:
@@ -59,6 +58,7 @@ outputs:
     test:
       imports:
         - frozendict
+  {% endif %}
 
 about:
   home: https://github.com/Marco-Sulla/python-frozendict
