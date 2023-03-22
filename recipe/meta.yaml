@@ -1,6 +1,6 @@
 {% set name = "frozendict" %}
-{% set version = "2.3.5" %}
-{% set sha256 = "65d7e3995c9174b77d7d80514d7062381750491e112bbeb44323368baa3e636a" %}
+{% set version = "2.3.6" %}
+{% set sha256 = "14e376fb0c8fe0b11b77872a84356dfa191b24a240be66bf5ec66d9b0d203bb8" %}
 
 package:
   name: {{ name|lower }}
