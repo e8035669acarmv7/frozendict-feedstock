@@ -2,6 +2,9 @@
 {% set version = "2.3.10" %}
 {% set sha256 = "aadc83510ce82751a0bb3575231f778bc37cbb373f5f05a52b888e26cbb92f79" %}
 
+{% set build_noarch = False %}
+{% set build_noarch = True %}  # [ppc64le and py==312]
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -12,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ name }}
@@ -36,6 +39,28 @@ outputs:
     test:
       imports:
         - frozendict
+
+  {% if build_noarch %}
+  - name: {{ name }}
+    build:
+      script: FROZENDICT_PURE_PY=1 python setup.py install
+      noarch: python
+      number: 2
+
+    requirements:
+      host:
+        - pip
+        - python
+        - setuptools
+        - wheel
+
+      run:
+        - python
+
+    test:
+      imports:
+        - frozendict
+  {% endif %}
 
 about:
   home: https://github.com/Marco-Sulla/python-frozendict
