@@ -1,6 +1,6 @@
 {% set name = "frozendict" %}
-{% set version = "2.3.10" %}
-{% set sha256 = "aadc83510ce82751a0bb3575231f778bc37cbb373f5f05a52b888e26cbb92f79" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "c26758198e403337933a92b01f417a8240c954f553e1d4b5e0f8e39d9c8e3f0a" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   script: python -m pip install . --no-deps -vv
-  number: 3
+  number: 0
 
 requirements:
   build:
